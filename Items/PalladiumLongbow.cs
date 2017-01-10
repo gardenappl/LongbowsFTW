@@ -20,14 +20,14 @@ namespace LongbowsFTW.Items
 			item.scale = 1.1f;
 			item.width = 14;
 			item.height = 40;
-			item.useSound = 5;
+			item.UseSound = SoundID.Item5;
 			item.damage = 34;
 			item.knockBack = 1.75f;
 			item.shoot = 1;
 			item.shootSpeed = 9.25f;
 			item.noMelee = true;
 			item.ranged = true;
-			item.useAmmo = 1;
+			item.useAmmo = AmmoID.Arrow;
 		}
 		
 		public override void AddRecipes()

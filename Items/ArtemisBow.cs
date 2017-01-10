@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -8,7 +9,7 @@ namespace LongbowsFTW.Items
 {
 	public class ArtemisBow : ModItem
 	{
-		public override bool Autoload(ref string name, ref string texture, System.Collections.Generic.IList<EquipType> equips)
+		public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
 		{
 			name = "Brahmastra"; //Backwards compatibility
 			return mod.Properties.Autoload;
@@ -26,14 +27,14 @@ namespace LongbowsFTW.Items
 			item.scale = 1.1f;
 			item.width = 14;
 			item.height = 44;
-			item.useSound = 5;
+			item.UseSound = SoundID.Item5;
 			item.damage = 43;
 			item.knockBack = 2.5f;
 			item.shoot = 1;
 			item.shootSpeed = 11;
 			item.noMelee = true;
 			item.ranged = true;
-			item.useAmmo = 1;
+			item.useAmmo = AmmoID.Arrow;
 		}
 		
 		public override void AddRecipes()

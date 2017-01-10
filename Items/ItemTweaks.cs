@@ -14,7 +14,7 @@ namespace LongbowsFTW.Items
 			{
 				case ItemID.CobaltRepeater:
 					item.useTime = item.useAnimation = 30;
-					item.damage = 42;					   
+					item.damage = 42;
 					item.shootSpeed = 12;
 					item.knockBack = 2;
 					break;
