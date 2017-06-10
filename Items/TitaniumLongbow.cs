@@ -1,6 +1,7 @@
 ﻿
 using System;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -8,9 +9,13 @@ namespace LongbowsFTW.Items
 {
 	public class TitaniumLongbow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.AddTranslation(GameCulture.Russian, "Титановый длинный лук");
+		}
+		
 		public override void SetDefaults()
 		{
-			item.name = "Titanium Longbow";
 			item.value = Item.sellPrice(0, 2, 80);
 			item.useStyle = 5;
 			item.useAnimation = 19;
@@ -32,7 +37,7 @@ namespace LongbowsFTW.Items
 		
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			var recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.AddIngredient(ItemID.TitaniumBar, 13);
 			recipe.SetResult(this);

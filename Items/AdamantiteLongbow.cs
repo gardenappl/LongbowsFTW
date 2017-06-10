@@ -1,6 +1,7 @@
 ﻿
 using System;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -8,9 +9,13 @@ namespace LongbowsFTW.Items
 {
 	public class AdamantiteLongbow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.AddTranslation(GameCulture.Russian, "Адамнтитовый длинный лук");
+		}
+		
 		public override void SetDefaults()
 		{
-			item.name = "Adamantite Longbow";
 			item.value = Item.sellPrice(0, 2, 40);
 			item.useStyle = 5;
 			item.useAnimation = 20;
@@ -32,7 +37,7 @@ namespace LongbowsFTW.Items
 		
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			var recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.AddIngredient(ItemID.AdamantiteBar, 12);
 			recipe.SetResult(this);

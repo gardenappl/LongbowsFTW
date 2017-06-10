@@ -9,6 +9,8 @@
     <RootNamespace>LongbowsFTW</RootNamespace>
     <AssemblyName>LongbowsFTW</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -57,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Items\AdamantiteLongbow.cs" />
-    <Compile Include="Items\ArtemisBow.cs" />
+    <Compile Include="Items\Brahmastra.cs" />
     <Compile Include="Items\ChlorophyteTribow.cs" />
     <Compile Include="Items\CobaltLongbow.cs" />
     <Compile Include="Items\ItemTweaks.cs" />
@@ -68,4 +70,7 @@
     <Compile Include="LongbowsFTW.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>E:\Yurik\Steam\SteamApps\common\Terraria\tModLoaderServer.exe -build "$(ProjectDir)\" -savedirectory "E:\Yurik\Terraria"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

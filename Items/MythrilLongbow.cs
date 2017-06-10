@@ -1,5 +1,6 @@
 ﻿using System;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -7,9 +8,13 @@ namespace LongbowsFTW.Items
 {
 	public class MythrilLongbow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.AddTranslation(GameCulture.Russian, "Мифриловый длинный лук");
+		}
+		
 		public override void SetDefaults()
 		{
-			item.name = "Mythril Longbow";
 			item.value = Item.sellPrice(0, 1, 80);
 			item.useStyle = 5;
 			item.useAnimation = 23;
@@ -31,7 +36,7 @@ namespace LongbowsFTW.Items
 		
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			var recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.AddIngredient(ItemID.MythrilBar, 10);
 			recipe.SetResult(this);

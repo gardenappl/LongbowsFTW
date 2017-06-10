@@ -2,6 +2,7 @@
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -9,9 +10,13 @@ namespace LongbowsFTW.Items
 {
 	public class ChlorophyteTribow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.AddTranslation(GameCulture.Russian, "Хлорофитовый трелук");
+		}
+		
 		public override void SetDefaults()
 		{
-			item.name = "Chlorophyte Tribow";
 			item.value = Item.sellPrice(0, 4, 80);
 			item.useStyle = 5;
 			item.useAnimation = 19;
@@ -33,7 +38,7 @@ namespace LongbowsFTW.Items
 		
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			var recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
 			recipe.SetResult(this);
@@ -42,10 +47,12 @@ namespace LongbowsFTW.Items
 		
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			for(int i = 0; i < Main.rand.Next(2, 5); i++)
+			int amount = Main.rand.Next(2, 5);
+			for(int i = 0; i < amount; i++)
 			{
-				int proj = Projectile.NewProjectile(position.X + (Main.rand.NextFloat() - 0.5f) * 0.5f, position.Y + (Main.rand.NextFloat() - 0.5f) * 0.5f,
-				                         speedX + (Main.rand.NextFloat() - 0.5f) * 3, speedY + (Main.rand.NextFloat() - 0.5f) * 3, type, damage, knockBack, item.owner);
+				var shootPos = position + Main.rand.NextVector2Square(2f, 2f);
+				var shootVel = new Vector2(speedX, speedY) + Main.rand.NextVector2Square(-1.5f, 1.5f);
+				int proj = Projectile.NewProjectile(shootPos, shootVel, type, damage, knockBack, item.owner);
 				Main.projectile[proj].noDropItem = true;
 			}
 			return false;

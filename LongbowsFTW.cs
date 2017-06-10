@@ -6,14 +6,6 @@ namespace LongbowsFTW
 {
 	public class LongbowsFTW : Mod
 	{
-		public LongbowsFTW()
-		{
-			Properties = new ModProperties
-			{
-				Autoload = true,
-				AutoloadGores = true,
-				AutoloadSounds = true
-			};
-		}
+		//why do I need this again?
 	}
 }

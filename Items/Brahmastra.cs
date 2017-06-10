@@ -2,22 +2,22 @@
 using System;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 
 namespace LongbowsFTW.Items
 {
-	public class ArtemisBow : ModItem
+	public class Brahmastra : ModItem
 	{
-		public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
+		public override void SetStaticDefaults()
 		{
-			name = "Brahmastra"; //Backwards compatibility
-			return mod.Properties.Autoload;
+			DisplayName.SetDefault("Artemis' Bow");
+			DisplayName.AddTranslation(GameCulture.Russian, "Лук Артемиды");
 		}
 		
 		public override void SetDefaults()
 		{
-			item.name = "Artemis' Bow";
 			item.value = Item.sellPrice(0, 4);
 			item.useStyle = 5;
 			item.useAnimation = 19;
@@ -39,7 +39,7 @@ namespace LongbowsFTW.Items
 		
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			var recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.AddIngredient(ItemID.HallowedBar, 12);
 			recipe.SetResult(this);

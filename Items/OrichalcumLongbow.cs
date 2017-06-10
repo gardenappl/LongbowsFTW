@@ -1,6 +1,7 @@
 ﻿
 using System;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -8,9 +9,13 @@ namespace LongbowsFTW.Items
 {
 	public class OrichalcumLongbow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.AddTranslation(GameCulture.Russian, "Орихалковый длинный лук");
+		}
+		
 		public override void SetDefaults()
 		{
-			item.name = "Orichalcum Longbow";
 			item.value = Item.sellPrice(0, 2, 20);
 			item.useStyle = 5;
 			item.useAnimation = 22;
@@ -32,7 +37,7 @@ namespace LongbowsFTW.Items
 		
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			var recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.AddIngredient(ItemID.OrichalcumBar, 12);
 			recipe.SetResult(this);
