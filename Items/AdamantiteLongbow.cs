@@ -12,6 +12,7 @@ namespace LongbowsFTW.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.AddTranslation(GameCulture.Russian, "Адамнтитовый длинный лук");
+			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Adamantina");
 		}
 		
 		public override void SetDefaults()

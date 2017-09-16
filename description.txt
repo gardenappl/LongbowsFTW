@@ -1,4 +1,6 @@
 ﻿Longbows FTW is a small mod that does two things:
  -It adds Longbows made from Hardmode ores (including Chlorophyte and Hallowed). They are non-Mechanical equivalents to Repeaters.
- -It makes Repeaters shoot slower, but with more damage, velocity and knockback. This way there is a bit more variety for arrow-shooting weapons.
-Hopefully you'll like it!
+ -It makes Repeaters shoot slower, but with more damage, velocity and knockback. This way there is more variety for arrow-shooting weapons.
+I hope you enjoy it!
+
+Thanks to Dota for the Portuguese translation.

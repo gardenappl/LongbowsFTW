@@ -14,6 +14,7 @@ namespace LongbowsFTW.Items
 		{
 			DisplayName.SetDefault("Artemis' Bow");
 			DisplayName.AddTranslation(GameCulture.Russian, "Лук Артемиды");
+			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco de Ártemis");
 		}
 		
 		public override void SetDefaults()

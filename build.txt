@@ -1,6 +1,6 @@
 ﻿displayName = Longbows FTW
 author = goldenapple
-version = 1.9
+version = 1.10
 homepage = http://forums.terraria.org/index.php?threads/longbowsftw-hardmode-ore-counterparts-for-repeaters.37052/
 hideResources = false
 hideCode = false

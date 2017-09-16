@@ -13,6 +13,7 @@ namespace LongbowsFTW.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.AddTranslation(GameCulture.Russian, "Хлорофитовый трелук");
+			DisplayName.AddTranslation(GameCulture.Portuguese, "Triarco de Clorofita");
 		}
 		
 		public override void SetDefaults()
