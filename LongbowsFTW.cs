@@ -6,6 +6,8 @@ namespace LongbowsFTW
 {
 	public class LongbowsFTW : Mod
 	{
-		//why do I need this again?
+		//Hamstar's Mod Helpers integration
+		public static string GithubUserName { get { return "goldenapple3"; } }
+		public static string GithubProjectName { get { return "LongbowsFTW"; } }
 	}
 }
