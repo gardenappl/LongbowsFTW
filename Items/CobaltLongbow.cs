@@ -9,12 +9,6 @@ namespace LongbowsFTW.Items
 {
 	public class CobaltLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Кобальтовый длинный лук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Cobalto");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 1, 20);

@@ -9,12 +9,6 @@ namespace LongbowsFTW.Items
 {
 	public class AdamantiteLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Адамнтитовый длинный лук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Adamantina");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 2, 40);

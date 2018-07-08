@@ -9,12 +9,6 @@ namespace LongbowsFTW.Items
 {
 	public class OrichalcumLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Орихалковый длинный лук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Oricalco");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 2, 20);

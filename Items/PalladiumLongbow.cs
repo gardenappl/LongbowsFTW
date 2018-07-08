@@ -9,12 +9,6 @@ namespace LongbowsFTW.Items
 {
 	public class PalladiumLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Палладиевый длинный лук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Paládio");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 1, 60);

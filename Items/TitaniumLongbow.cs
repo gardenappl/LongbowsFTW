@@ -9,12 +9,6 @@ namespace LongbowsFTW.Items
 {
 	public class TitaniumLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Титановый длинный лук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Titânio");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 2, 80);

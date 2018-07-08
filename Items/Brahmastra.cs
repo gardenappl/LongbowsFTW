@@ -9,14 +9,7 @@ using Terraria.ID;
 namespace LongbowsFTW.Items
 {
 	public class Brahmastra : ModItem
-	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Artemis' Bow");
-			DisplayName.AddTranslation(GameCulture.Russian, "Лук Артемиды");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco de Ártemis");
-		}
-		
+	{	
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 4);

@@ -10,12 +10,6 @@ namespace LongbowsFTW.Items
 {
 	public class ChlorophyteTribow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Хлорофитовый трелук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Triarco de Clorofita");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 4, 80);

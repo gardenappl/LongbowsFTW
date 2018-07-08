@@ -8,12 +8,6 @@ namespace LongbowsFTW.Items
 {
 	public class MythrilLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.AddTranslation(GameCulture.Russian, "Мифриловый длинный лук");
-			DisplayName.AddTranslation(GameCulture.Portuguese, "Arco Longo de Mithril");
-		}
-		
 		public override void SetDefaults()
 		{
 			item.value = Item.sellPrice(0, 1, 80);
