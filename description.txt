@@ -3,4 +3,6 @@
  -It makes Repeaters shoot slower, but with more damage, velocity and knockback. This way there is more variety for arrow-shooting weapons.
 I hope you enjoy it!
 
-Thanks to Dota for the Portuguese translation.
+Special thanks:
+Dota for the Portuguese translation.
+Pop000100 for maintaining the mod.
