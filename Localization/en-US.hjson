@@ -1,0 +1,14 @@
+Mods: {
+	LongbowsFTW: {
+		ItemName: {
+			CobaltLongbow: Cobalt Longbow
+			PalladiumLongbow: Palladium Longbow
+			MythrilLongbow: Mythril Longbow
+			OrichalcumLongbow: Orichalcum Longbow
+			AdamantiteLongbow: Adamantite Longbow
+			TitaniumLongbow: Titanium Longbow
+			Brahmastra: Artemis' Bow
+			ChlorophyteTribow: Chlorophyte Tribow
+		}
+	}
+}

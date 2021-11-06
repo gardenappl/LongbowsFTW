@@ -1,8 +1,9 @@
 ﻿displayName = Longbows FTW
 author = gardenapple
-version = 1.11
+version = 1.11.1
 homepage = http://forums.terraria.org/index.php?threads/longbowsftw-hardmode-ore-counterparts-for-repeaters.37052/
 hideResources = false
 hideCode = false
 includeSource = true
-buildIgnore = obj\*, bin\*, *.csproj, .git\*, .gitattributes, .gitignore
+includePDB = true
+buildIgnore = .gitattributes, .gitignore, .git\*, .vs\*, .idea\*, bin\*, obj\*, Thumbs.db

@@ -1,0 +1,14 @@
+Mods: {
+	LongbowsFTW: {
+		ItemName: {
+			CobaltLongbow: Кобальтовый длинный лук
+			PalladiumLongbow: Палладиевый длинный лук
+			MythrilLongbow: Мифриловый длинный лук
+			OrichalcumLongbow: Орихалковый длинный лук
+			AdamantiteLongbow: Адамнтитовый длинный лук
+			TitaniumLongbow: Титановый длинный лук
+			Brahmastra: Лук Артемиды
+			ChlorophyteTribow: Хлорофитовый трелук
+		}
+	}
+}
