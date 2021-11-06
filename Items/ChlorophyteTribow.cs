@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.DataStructures;
 
 namespace LongbowsFTW.Items
 {
@@ -12,42 +13,41 @@ namespace LongbowsFTW.Items
 	{
 		public override void SetDefaults()
 		{
-			item.value = Item.sellPrice(0, 4, 80);
-			item.useStyle = 5;
-			item.useAnimation = 19;
-			item.useTime = 19;
-			item.autoReuse = true;
-			item.rare = 7;
-			item.scale = 1.1f;
-			item.width = 14;
-			item.height = 42;
-			item.UseSound = SoundID.Item5;
-			item.damage = 34;
-			item.knockBack = 2.75f;
-			item.shoot = 1;
-			item.shootSpeed = 11.5f;
-			item.noMelee = true;
-			item.ranged = true;
-			item.useAmmo = AmmoID.Arrow;
+			Item.value = Item.sellPrice(0, 4, 80);
+			Item.useStyle = 5;
+			Item.useAnimation = 19;
+			Item.useTime = 19;
+			Item.autoReuse = true;
+			Item.rare = 7;
+			Item.scale = 1.1f;
+			Item.width = 14;
+			Item.height = 42;
+			Item.UseSound = SoundID.Item5;
+			Item.damage = 34;
+			Item.knockBack = 2.75f;
+			Item.shoot = 1;
+			Item.shootSpeed = 11.5f;
+			Item.noMelee = true;
+			Item.DamageType = DamageClass.Ranged;
+			Item.useAmmo = AmmoID.Arrow;
 		}
 		
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe()
+				.AddTile(TileID.MythrilAnvil)
+				.AddIngredient(ItemID.ChlorophyteBar, 12)
+				.Register();
 		}
 		
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		public override bool Shoot(Player player, ProjectileSource_Item_WithAmmo source,  Vector2 position, Vector2 velocity, int type, int damage, float knockBack)
 		{
 			int amount = Main.rand.Next(2, 5);
 			for(int i = 0; i < amount; i++)
 			{
 				var shootPos = position + Main.rand.NextVector2Square(2f, 2f);
-				var shootVel = new Vector2(speedX, speedY) + Main.rand.NextVector2Square(-1.5f, 1.5f);
-				int proj = Projectile.NewProjectile(shootPos, shootVel, type, damage, knockBack, item.owner);
+				var shootVel = velocity + Main.rand.NextVector2Square(-1.5f, 1.5f);
+				int proj = Projectile.NewProjectile(source, shootPos, shootVel, type, damage, knockBack, player.whoAmI);
 				Main.projectile[proj].noDropItem = true;
 			}
 			return false;

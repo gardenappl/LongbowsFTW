@@ -11,32 +11,31 @@ namespace LongbowsFTW.Items
 	{
 		public override void SetDefaults()
 		{
-			item.value = Item.sellPrice(0, 1, 60);
-			item.useStyle = 5;
-			item.useAnimation = 24;
-			item.useTime = 24;
-			item.autoReuse = true;
-			item.rare = 4;
-			item.scale = 1.1f;
-			item.width = 14;
-			item.height = 40;
-			item.UseSound = SoundID.Item5;
-			item.damage = 34;
-			item.knockBack = 1.75f;
-			item.shoot = 1;
-			item.shootSpeed = 9.25f;
-			item.noMelee = true;
-			item.ranged = true;
-			item.useAmmo = AmmoID.Arrow;
+			Item.value = Item.sellPrice(0, 1, 60);
+			Item.useStyle = 5;
+			Item.useAnimation = 24;
+			Item.useTime = 24;
+			Item.autoReuse = true;
+			Item.rare = 4;
+			Item.scale = 1.1f;
+			Item.width = 14;
+			Item.height = 40;
+			Item.UseSound = SoundID.Item5;
+			Item.damage = 34;
+			Item.knockBack = 1.75f;
+			Item.shoot = 1;
+			Item.shootSpeed = 9.25f;
+			Item.noMelee = true;
+			Item.DamageType = DamageClass.Ranged;
+			Item.useAmmo = AmmoID.Arrow;
 		}
 		
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
-			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(ItemID.PalladiumBar, 12);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe()
+				.AddTile(TileID.MythrilAnvil)
+				.AddIngredient(ItemID.PalladiumBar, 12)
+				.Register();
 		}
 	}
 }
