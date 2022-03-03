@@ -4,11 +4,17 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace LongbowsFTW.Items
 {
 	public class TitaniumLongbow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
+
 		public override void SetDefaults()
 		{
 			Item.value = Item.sellPrice(0, 2, 80);
