@@ -6,11 +6,16 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.DataStructures;
+using Terraria.GameContent.Creative;
 
 namespace LongbowsFTW.Items
 {
 	public class ChlorophyteTribow : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
 		public override void SetDefaults()
 		{
 			Item.value = Item.sellPrice(0, 4, 80);
@@ -40,7 +45,7 @@ namespace LongbowsFTW.Items
 				.Register();
 		}
 		
-		public override bool Shoot(Player player, ProjectileSource_Item_WithAmmo source,  Vector2 position, Vector2 velocity, int type, int damage, float knockBack)
+		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,  Vector2 position, Vector2 velocity, int type, int damage, float knockBack)
 		{
 			int amount = Main.rand.Next(2, 5);
 			for(int i = 0; i < amount; i++)
