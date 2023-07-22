@@ -1,14 +1,45 @@
 Mods: {
 	LongbowsFTW: {
-		ItemName: {
-			CobaltLongbow: Cobalt Longbow
-			PalladiumLongbow: Palladium Longbow
-			MythrilLongbow: Mythril Longbow
-			OrichalcumLongbow: Orichalcum Longbow
-			AdamantiteLongbow: Adamantite Longbow
-			TitaniumLongbow: Titanium Longbow
-			Brahmastra: Artemis' Bow
-			ChlorophyteTribow: Chlorophyte Tribow
+		Items: {
+			AdamantiteLongbow: {
+				DisplayName: Adamantite Longbow
+				Tooltip: ""
+			}
+
+			Brahmastra: {
+				DisplayName: Artemis' Bow
+				Tooltip: ""
+			}
+
+			ChlorophyteTribow: {
+				DisplayName: Chlorophyte Tribow
+				Tooltip: ""
+			}
+
+			CobaltLongbow: {
+				DisplayName: Cobalt Longbow
+				Tooltip: ""
+			}
+
+			MythrilLongbow: {
+				DisplayName: Mythril Longbow
+				Tooltip: ""
+			}
+
+			OrichalcumLongbow: {
+				DisplayName: Orichalcum Longbow
+				Tooltip: ""
+			}
+
+			PalladiumLongbow: {
+				DisplayName: Palladium Longbow
+				Tooltip: ""
+			}
+
+			TitaniumLongbow: {
+				DisplayName: Titanium Longbow
+				Tooltip: ""
+			}
 		}
 	}
 }
