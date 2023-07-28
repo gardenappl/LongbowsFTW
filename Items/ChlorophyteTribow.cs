@@ -12,25 +12,21 @@ namespace LongbowsFTW.Items
 {
 	public class ChlorophyteTribow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
 		public override void SetDefaults()
 		{
 			Item.value = Item.sellPrice(0, 4, 80);
-			Item.useStyle = 5;
+			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 19;
 			Item.useTime = 19;
 			Item.autoReuse = true;
-			Item.rare = 7;
+			Item.rare = ItemRarityID.Lime;
 			Item.scale = 1.1f;
 			Item.width = 14;
 			Item.height = 42;
 			Item.UseSound = SoundID.Item5;
 			Item.damage = 34;
 			Item.knockBack = 2.75f;
-			Item.shoot = 1;
+			Item.shoot = ProjectileID.WoodenArrowFriendly;
 			Item.shootSpeed = 11.5f;
 			Item.noMelee = true;
 			Item.DamageType = DamageClass.Ranged;

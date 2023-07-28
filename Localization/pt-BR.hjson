@@ -1,14 +1,45 @@
 Mods: {
 	LongbowsFTW: {
-		ItemName: {
-			CobaltLongbow: Arco Longo de Cobalto
-			PalladiumLongbow: Arco Longo de Paládio
-			MythrilLongbow: Arco Longo de Mithril
-			OrichalcumLongbow: Arco Longo de Oricalco
-			AdamantiteLongbow: Arco Longo de Adamantina
-			TitaniumLongbow: Arco Longo de Titânio
-			Brahmastra: Arco de Ártemis
-			ChlorophyteTribow: Triarco de Clorofita
+		Items: {
+			AdamantiteLongbow: {
+				DisplayName: Arco Longo de Adamantina
+				Tooltip: ""
+			}
+
+			Brahmastra: {
+				DisplayName: Arco de Ártemis
+				Tooltip: ""
+			}
+
+			ChlorophyteTribow: {
+				DisplayName: Triarco de Clorofita
+				Tooltip: ""
+			}
+
+			CobaltLongbow: {
+				DisplayName: Arco Longo de Cobalto
+				Tooltip: ""
+			}
+
+			MythrilLongbow: {
+				DisplayName: Arco Longo de Mithril
+				Tooltip: ""
+			}
+
+			OrichalcumLongbow: {
+				DisplayName: Arco Longo de Oricalco
+				Tooltip: ""
+			}
+
+			PalladiumLongbow: {
+				DisplayName: Arco Longo de Paládio
+				Tooltip: ""
+			}
+
+			TitaniumLongbow: {
+				DisplayName: Arco Longo de Titânio
+				Tooltip: ""
+			}
 		}
 	}
 }

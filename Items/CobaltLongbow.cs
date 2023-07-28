@@ -10,24 +10,20 @@ namespace LongbowsFTW.Items
 {
 	public class CobaltLongbow : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
 		public override void SetDefaults()
 		{
 			Item.value = Item.sellPrice(0, 1, 20);
-			Item.useStyle = 5;
+			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 25;
 			Item.useTime = 25;
 			Item.autoReuse = true;
-			Item.rare = 4;
+			Item.rare = ItemRarityID.LightRed;
 			Item.width = 12;
 			Item.height = 44;
 			Item.UseSound = SoundID.Item5;
 			Item.damage = 32;
 			Item.knockBack = 1.5f;
-			Item.shoot = 1;
+			Item.shoot = ProjectileID.WoodenArrowFriendly;
 			Item.shootSpeed = 9;
 			Item.noMelee = true;
 			Item.DamageType = DamageClass.Ranged;
